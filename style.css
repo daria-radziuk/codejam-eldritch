@@ -1,0 +1,184 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+    background: url("./assets/home.png") no-repeat;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.411);
+    color: aliceblue;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+}
+.ancients{
+    display: flex; 
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+.azathoth{
+    padding-right: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.azathoth_active{
+    border: 2px solid rgb(89, 0, 255);
+}
+.iogSothoth{
+    padding-right: 20px;
+    padding-bottom: 20px; 
+    cursor: pointer;
+}
+.iogSothoth_active{
+    border: 2px solid rgb(89, 0, 255);
+}
+.cthulthu{
+    cursor: pointer;
+}
+.cthulthu_active{
+    border: 2px solid rgb(89, 0, 255);
+}
+.shubNiggurath{
+    cursor: pointer;
+}
+.shubNiggurath_active{
+    border: 2px solid rgb(89, 0, 255);
+}
+.difficulty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.dif{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    background-color: rgba(21, 0, 59, 0.384); ;
+    border: 2px solid rgb(89, 0, 255);
+    margin-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.deck{
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+}
+.stage{
+    padding-bottom: 20px;
+}
+.stage_text{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    padding-bottom: 5px;
+}
+.stage_dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    gap: 15px;
+}
+.dot{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.green{
+    background-color: green;
+}
+.brown{
+    background-color: brown;
+}
+.blue{
+    background-color: blue;
+}
+.deck_card{
+    cursor: pointer;
+}
