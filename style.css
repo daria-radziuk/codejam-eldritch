@@ -161,6 +161,22 @@ main{
     color: rgb(89, 0, 255);
     background-color: white;
 }
+.easy_active{
+    color: rgb(89, 0, 255);
+    background-color: white;
+}
+.veryeasy_active{
+    color: rgb(89, 0, 255);
+    background-color: white;
+}
+.veryhigh_active{
+    color: rgb(89, 0, 255);
+    background-color: white;
+}
+.high_active{
+    color: rgb(89, 0, 255);
+    background-color: white;
+}
 .deck_btn{
     display: flex;
     justify-content: center;

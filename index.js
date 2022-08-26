@@ -7,6 +7,10 @@ const iogSothoth = document.querySelector('.iogSothoth');
 const shubNiggurath = document.querySelector('.shubNiggurath');
 const difficulty = document.querySelector('.difficulty');
 const normal = document.querySelector('.normal');
+const veryeasy = document.querySelector('.veryeasy');
+const easy = document.querySelector('.easy');
+const veryhigh = document.querySelector('.veryhigh');
+const high = document.querySelector('.high');
 const deck_btn = document.querySelector('.deck_btn');
 const deck = document.querySelector('.deck');
 
@@ -50,12 +54,61 @@ const deck = document.querySelector('.deck');
     });
 }());
 
-//азатот средний уровень
+//азатот уровни
 
 (function () {
     normal.addEventListener('click', () => {
       normal.classList.add('normal_active'); 
+      deck_btn.classList.add('deck_btn_active');
+      veryeasy.classList.remove('veryeasy_active');
+      easy.classList.remove('easy_active');
+      veryhigh.classList.remove('veryhigh_active');
+      high.classList.remove('high_active');
+    });
+}());
+
+(function () {
+    veryeasy.addEventListener('click', () => {
+      veryeasy.classList.add('veryeasy_active'); 
       deck_btn.classList.add('deck_btn_active'); 
+      normal.classList.remove('normal_active');
+      easy.classList.remove('easy_active');
+      veryhigh.classList.remove('veryhigh_active');
+      high.classList.remove('high_active');
+    });
+}());
+
+
+(function () {
+    easy.addEventListener('click', () => {
+      easy.classList.add('easy_active'); 
+      deck_btn.classList.add('deck_btn_active'); 
+      normal.classList.remove('normal_active'); 
+      veryeasy.classList.remove('veryeasy_active');
+      veryhigh.classList.remove('veryhigh_active');
+      high.classList.remove('high_active');
+    });
+}());
+
+(function () {
+    veryhigh.addEventListener('click', () => {
+      veryhigh.classList.add('veryhigh_active'); 
+      deck_btn.classList.add('deck_btn_active'); 
+      normal.classList.remove('normal_active'); 
+      veryeasy.classList.remove('veryeasy_active');
+      easy.classList.remove('easy_active');
+      high.classList.remove('high_active');
+    });
+}());
+
+(function () {
+    high.addEventListener('click', () => {
+      high.classList.add('high_active'); 
+      deck_btn.classList.add('deck_btn_active'); 
+      normal.classList.remove('normal_active'); 
+      veryeasy.classList.remove('veryeasy_active');
+      easy.classList.remove('easy_active');
+      veryhigh.classList.remove('veryhigh_active');
     });
 }());
 
@@ -64,6 +117,10 @@ const deck = document.querySelector('.deck');
       deck.classList.add('deck_active'); 
     });
 }());
+
+
+
+
 
 import {cardsBlue} from './assets/mythicCards/blue/cardsBlue.js'
 
@@ -80,7 +137,7 @@ function getRandomNum(min, max) {
 function randomCard () {
     const cardNum = randomNum.toString().padStart(2, "0");
     const img = new Image();
-    const url = `./assets/mithicCards/blue/blue1.png`;
+    const url = `./assets/mithicCards/blue/blue$(cardNum).png`;
     img.src = url;
 
     img.onload = () => {
