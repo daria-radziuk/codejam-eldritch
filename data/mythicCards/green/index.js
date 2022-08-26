@@ -1,4 +1,4 @@
-import greenCardsAssets from '../../../assets/MythicCards/green';
+import greenCardsAssets from '../../../../Desktop/eldritch-codejam-main2/eldritch-codejam-main/assets/MythicCards/green';
 
 const cardsData = [
   {

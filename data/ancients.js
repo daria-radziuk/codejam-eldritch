@@ -1,4 +1,4 @@
-import Ancients from '../assets/Ancients/index'
+import Ancients from '../../Desktop/eldritch-codejam-main2/eldritch-codejam-main/assets/Ancients/index'
 
 const ancientsData = [
   {

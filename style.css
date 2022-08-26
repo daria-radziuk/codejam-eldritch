@@ -100,16 +100,16 @@ main{
     max-width: 700px;
 }
 .azathoth{
-    padding-right: 20px;
-    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 .azathoth_active{
     border: 2px solid rgb(89, 0, 255);
 }
 .iogSothoth{
-    padding-right: 20px;
-    padding-bottom: 20px; 
+    margin-right: 20px;
+    margin-bottom: 20px; 
     cursor: pointer;
 }
 .iogSothoth_active{
@@ -117,12 +117,16 @@ main{
 }
 .cthulthu{
     cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px; 
 }
 .cthulthu_active{
     border: 2px solid rgb(89, 0, 255);
 }
 .shubNiggurath{
     cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 20px; 
 }
 .shubNiggurath_active{
     border: 2px solid rgb(89, 0, 255);
@@ -132,6 +136,15 @@ main{
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+.difficulty_active{
+    opacity: 1;
+    visibility: visible;
 }
 .dif{
     display: flex;
@@ -144,10 +157,43 @@ main{
     padding-left: 5px;
     cursor: pointer;
 }
+.normal_active{
+    color: rgb(89, 0, 255);
+    background-color: white;
+}
+.deck_btn{
+    display: flex;
+    justify-content: center;
+    color: rgb(89, 0, 255);
+    background-color: white;
+    border: 5px solid black;
+    padding-right: 5px;
+    padding-left: 5px;
+    cursor: pointer;  
+    margin-top: 40px;  
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+.deck_btn_active{
+    opacity: 1;
+    visibility: visible;
+}
 .deck{
     display: flex;
     flex-direction: column;
     margin-right: 150px;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+.deck_active{
+    opacity: 1;
+    visibility: visible;
 }
 .stage{
     padding-bottom: 20px;
